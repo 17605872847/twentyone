@@ -2,11 +2,6 @@ body{
     margin: 0;
 }
 
-ul,li,ol{
-    list-style: none;
-    margin: 0;
-}
-
 h1, h2, h3, h4, strong {
     font-weight: 600;
     color: #273849;
@@ -21,15 +16,21 @@ a{
     color: #304455
 }
 
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
 #header{
     background-color: #fff;
-    height: 60px;
+    height: 64px;
     padding: 10px 60px;
     position: relative;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    border-bottom: 1px solid silver;
 }
 
 #logo{
