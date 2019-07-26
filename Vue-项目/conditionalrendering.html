@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Class与Style绑定</title>
+    <title>条件渲染</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/public.css">
 </head>
@@ -179,26 +179,22 @@
                                 <a href="" class="sidebar-link">计算属性和侦听器</a>
                             </li>
                             <li>
-                                <a href="" class="sidebar-link current">Class 与 Style 绑定</a>
-                                <ul class="menu-sub">
-                                    <li><a class="section-link" href="#绑定-HTML-Class">绑定 HTML Class</a>
-                                    </li>
-                                    <ul>
-                                        <li><a class="section-link" href="#对象语法">对象语法</a></li>
-                                        <li><a class="section-link" href="#数组语法">数组语法</a></li>
-                                        <li><a class="section-link" href="#用在组件上">用在组件上</a></li>
-                                    </ul>
-                                    <li><a class="section-link" href="#绑定内联样式">绑定内联样式</a></li>
-                                    <ul>
-                                        <li><a class="section-link" href="#对象语法-1">对象语法</a></li>
-                                        <li><a class="section-link" href="#数组语法-1">数组语法</a></li>
-                                        <li><a class="section-link" href="#自动添加前缀">自动添加前缀</a></li>
-                                        <li><a class="section-link" href="#多重值">多重值</a></li>
-                                    </ul>
-                                </ul>
+                                <a href="" class="sidebar-link">Class 与 Style 绑定</a>
                             </li>
                             <li>
-                                <a href="" class="sidebar-link">条件渲染</a>
+                                <a href="" class="sidebar-link current">条件渲染</a>
+                                <ul class="menu-sub">
+                                    <li><a class="section-link active"  href="#v-if">v-if</a></li>
+                                    <ul>
+                                        <li><a class="section-link"  href="#在-lt-template-gt-元素上使用-v-if-条件渲染分组">在 &lt;template&gt; 元素上使用 v-if 条件渲染分组</a></li>
+                                        <li><a class="section-link"  href="#v-else">v-else</a></li>
+                                        <li><a class="section-link"  href="#v-else-if">v-else-if</a></li>
+                                        <li><a class="section-link"  href="#用-key-管理可复用的元素">用 key 管理可复用的元素</a></li>
+                                    </ul>
+                                    <li><a class="section-link"  href="#v-show">v-show</a>></li>
+                                    <li><a class="section-link"  href="#v-if-vs-v-show">v-if vs v-show</a></li>
+                                    <li><a class="section-link"  href="#v-if-与-v-for-一起使用">v-if 与 v-for 一起使用</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="" class="sidebar-link">列表渲染</a>
@@ -328,7 +324,7 @@
                         <img src="img/tencent-ad.png">
                     </a>
                 </div>
-                <h1>Class与Style绑定</h1>
+                <h1>条件渲染</h1>
                 <div class="ad-pagetop">
                     <a href="">
                         <span class="name">TPshop</span>
@@ -336,117 +332,92 @@
                         <span class="action">立即查看 &gt;</span>
                     </a>
                 </div>
-                <p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 <code>v-bind</code> 处理它们：只需要通过表达式计算出字符串结果即可。不过，字符串拼接麻烦且易错。因此，在将 <code>v-bind</code> 用于 <code>class</code> 和 <code>style</code> 时，Vue.js 做了专门的增强。表达式结果的类型除了字符串之外，还可以是对象或数组。</p>
-                <h2 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class">绑定 HTML Class</a></h2>
-                <div class="vueschool"><a href="">Watch a free video lesson on Vue School</a></div>
-                <h3 id="对象语法"><a href="#对象语法" class="headerlink" title="对象语法">对象语法</a></h3>
-                <p>我们可以传给 <code>v-bind:class</code> 一个对象，以动态地切换 class：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>上面的语法表示 <code>active</code> 这个 class 存在与否将取决于数据属性 <code>isActive</code> 的 <a href="">truthiness</a>。</p>
-                <p>你可以在对象中传入更多属性来动态切换多个 class。此外，<code>v-bind:class</code> 指令也可以与普通的 class 属性共存。当有如下模板:</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-  <span class="hljs-attr">class</span>=<span class="hljs-string">"static"</span>
-  <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive, 'text-danger': hasError }"</span>
-&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>和如下 data：</p>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">isActive</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">hasError</span>: <span class="hljs-literal">false</span>
-}</code></pre>
-                <p>结果渲染为：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"static active"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>当 <code>isActive</code> 或者 <code>hasError</code> 变化时，class 列表将相应地更新。例如，如果 <code>hasError</code> 的值为 <code>true</code>，class 列表将变为 <code>"static active text-danger"</code>。</p>
-                <p>绑定的数据对象不必内联定义在模板里：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"classObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">classObject</span>: {
-    <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-string">'text-danger'</span>: <span class="hljs-literal">false</span>
-  }
-}</code></pre>
-                <p>渲染的结果和上面一样。我们也可以在这里绑定一个返回对象的<a href="">计算属性</a>。这是一个常用且强大的模式：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"classObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">isActive</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">error</span>: <span class="hljs-literal">null</span>
-},
-<span class="hljs-attr">computed</span>: {
-  <span class="hljs-attr">classObject</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> {
-      <span class="hljs-attr">active</span>: <span class="hljs-keyword">this</span>.isActive &amp;&amp; !<span class="hljs-keyword">this</span>.error,
-      <span class="hljs-string">'text-danger'</span>: <span class="hljs-keyword">this</span>.error &amp;&amp; <span class="hljs-keyword">this</span>.error.type === <span class="hljs-string">'fatal'</span>
-    }
-  }
-}</code></pre>
-                <h3 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法">数组语法</a></h3>
-                <p>我们可以把一个数组传给 <code>v-bind:class</code>，以应用一个 class 列表：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[activeClass, errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">activeClass</span>: <span class="hljs-string">'active'</span>,
-  <span class="hljs-attr">errorClass</span>: <span class="hljs-string">'text-danger'</span>
-}</code></pre>
-                <p>渲染为：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active text-danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>如果你也想根据条件切换列表中的 class，可以用三元表达式：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[isActive ? activeClass : '', errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>这样写将始终添加 <code>errorClass</code>，但是只有在 <code>isActive</code> 是 truthy<sup><a href="#footnote-1">[1]</a></sup> 时才添加 <code>activeClass</code>。</p>
-                <p>不过，当有多个条件 class 时这样写有些繁琐。所以在数组语法中也可以使用对象语法：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[{ active: isActive }, errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <h3 id="用在组件上"><a href="#用在组件上" class="headerlink" title="用在组件上">用在组件上</a></h3>
+                <h2 id="v-if" style="outline: none;"><a href="#v-if" class="headerlink"><code>v-if</code></a></h2>
+                <p><code>v-if</code> 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"awesome"</span>&gt;</span>Vue is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+                <p>也可以用 <code>v-else</code> 添加一个“else 块”：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"awesome"</span>&gt;</span>Vue is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-else</span>&gt;</span>Oh no 😢<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+                <h3 id="在-lt-template-gt-元素上使用-v-if-条件渲染分组"><a href="#在-lt-template-gt-元素上使用-v-if-条件渲染分组" class="headerlink" title="在 <template> 元素上使用 v-if 条件渲染分组" >在 <code>&lt;template&gt;</code> 元素上使用 <code>v-if</code> 条件渲染分组</a></h3>
+                <p>因为 <code>v-if</code> 是一个指令，所以必须将它添加到一个元素上。但是如果想切换多个元素呢？此时可以把一个 <code>&lt;template&gt;</code> 元素当做不可见的包裹元素，并在上面使用 <code>v-if</code>。最终的渲染结果将不包含 <code>&lt;template&gt;</code> 元素。</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"ok"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph 1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph 2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></code></pre>
+                <h3 id="v-else" style="outline: none;"><a href="#v-else" class="headerlink"><code>v-else</code></a></h3>
+                <p>你可以使用 <code>v-else</code> 指令来表示 <code>v-if</code> 的“else 块”：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"Math.random() &gt; 0.5"</span>&gt;</span>
+  Now you see me
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else</span>&gt;</span>
+  Now you don't
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p><code>v-else</code> 元素必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素的后面，否则它将不会被识别。</p>
+                <h3 id="v-else-if" style="outline: none;"><a href="#v-else-if" class="headerlink"><code>v-else-if</code></a></h3>
                 <blockquote>
-                    <p>这个章节假设你已经对 <a href="">Vue 组件</a>有一定的了解。当然你也可以先跳过这里，稍后再回过头来看。</p>
+                    <p>2.1.0 新增</p>
                 </blockquote>
-                <p>当在一个自定义组件上使用 <code>class</code> 属性时，这些类将被添加到该组件的根元素上面。这个元素上已经存在的类不会被覆盖。</p>
-                <p>例如，如果你声明了这个组件：</p>
-                <pre><code class="hljs js">Vue.component(<span class="hljs-string">'my-component'</span>, {
-  <span class="hljs-attr">template</span>: <span class="hljs-string">'&lt;p class="foo bar"&gt;Hi&lt;/p&gt;'</span>
-})</code></pre>
-                <p>然后在使用它的时候添加一些 class：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"baz boo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
-                <p>HTML 将被渲染为:</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"foo bar baz boo"</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-                <p>对于带数据绑定 class 也同样适用：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
-                <p>当 <code>isActive</code> 为 truthy<sup><a href="#footnote-1">[1]</a></sup> 时，HTML 将被渲染成为：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"foo bar active"</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-                <h2 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式">绑定内联样式</a></h2>
-                <h3 id="对象语法-1"><a href="#对象语法-1" class="headerlink" title="对象语法">对象语法</a></h3>
-                <p><code>v-bind:style</code> 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"{ color: activeColor, fontSize: fontSize + 'px' }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">activeColor</span>: <span class="hljs-string">'red'</span>,
-  <span class="hljs-attr">fontSize</span>: <span class="hljs-number">30</span>
-}</code></pre>
-                <p>直接绑定到一个样式对象通常更好，这会让模板更清晰：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"styleObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <pre><code class="hljs js">data: {
-  <span class="hljs-attr">styleObject</span>: {
-    <span class="hljs-attr">color</span>: <span class="hljs-string">'red'</span>,
-    <span class="hljs-attr">fontSize</span>: <span class="hljs-string">'13px'</span>
-  }
-}</code></pre>
-                <p>同样的，对象语法常常结合返回对象的计算属性使用。</p>
-                <h3 id="数组语法-1"><a href="#数组语法-1" class="headerlink" title="数组语法">数组语法</a></h3>
-                <p><code>v-bind:style</code> 的数组语法可以将多个样式对象应用到同一个元素上：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"[baseStyles, overridingStyles]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <h3 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀">自动添加前缀</a></h3>
-                <p>当 <code>v-bind:style</code> 使用需要添加<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Vendor_Prefix" target="_blank" rel="noopener">浏览器引擎前缀</a>的 CSS 属性时，如 <code>transform</code>，Vue.js 会自动侦测并添加相应的前缀。</p>
-                <h3 id="多重值"><a href="#多重值" class="headerlink" title="多重值">多重值</a></h3>
-                <blockquote>
-                    <p>2.3.0+</p>
-                </blockquote>
-                <p>从 2.3.0 起你可以为 <code>style</code> 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值，例如：</p>
-                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">"{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                <p>这样写只会渲染数组中最后一个被浏览器支持的值。在本例中，如果浏览器支持不带浏览器前缀的 flexbox，那么就只会渲染 <code>display: flex</code>。</p>
-                <p><small><br><strong>译者注</strong><br><a id="footnote-1"></a>[1] truthy 不是 <code>true</code>，详见 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy" target="_blank" rel="noopener">MDN</a> 的解释。<br></small></p>
+                <p><code>v-else-if</code>，顾名思义，充当 <code>v-if</code> 的“else-if 块”，可以连续使用：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"type === 'A'"</span>&gt;</span>
+  A
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"type === 'B'"</span>&gt;</span>
+  B
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">"type === 'C'"</span>&gt;</span>
+  C
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else</span>&gt;</span>
+  Not A/B/C
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>类似于 <code>v-else</code>，<code>v-else-if</code> 也必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素之后。</p>
+                <h3 id="用-key-管理可复用的元素"><a href="#用-key-管理可复用的元素" class="headerlink" title="用 key 管理可复用的元素">用 <code>key</code> 管理可复用的元素</a></h3>
+                <p>Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。这么做除了使 Vue 变得非常快之外，还有其它一些好处。例如，如果你允许用户在不同的登录方式之间切换：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"loginType === 'username'"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Username<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your username"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-else</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your email address"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></code></pre>
+                <p>那么在上面的代码中切换 <code>loginType</code> 将不会清除用户已经输入的内容。因为两个模板使用了相同的元素，<code>&lt;input&gt;</code> 不会被替换掉——仅仅是替换了它的 <code>placeholder</code>。</p>
+                <p>自己动手试一试，在输入框中输入一些文本，然后按下切换按钮：</p>
+                <div id="no-key-example" class="demo"><div><label>Username</label> <input placeholder="Enter your username"></div> <button>Toggle login type</button></div>
+                <p>这样也不总是符合实际需求，所以 Vue 为你提供了一种方式来表达“这两个元素是完全独立的，不要复用它们”。只需添加一个具有唯一值的 <code>key</code> 属性即可：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"loginType === 'username'"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Username<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your username"</span> <span class="hljs-attr">key</span>=<span class="hljs-string">"username-input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-else</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your email address"</span> <span class="hljs-attr">key</span>=<span class="hljs-string">"email-input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></code></pre>
+                <p>现在，每次切换时，输入框都将被重新渲染。请看：</p>
+                <div id="key-example" class="demo"><div><label>Username</label> <input placeholder="Enter your username"></div> <button>Toggle login type</button></div>
+                <p>注意，<code>&lt;label&gt;</code> 元素仍然会被高效地复用，因为它们没有添加 <code>key</code> 属性。</p>
+                <h2 id="v-show" style="outline: none;"><a href="#v-show" class="headerlink"><code>v-show</code></a></h2>
+                <p>另一个用于根据条件展示元素的选项是 <code>v-show</code> 指令。用法大致一样：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">"ok"</span>&gt;</span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+                <p>不同的是带有 <code>v-show</code> 的元素始终会被渲染并保留在 DOM 中。<code>v-show</code> 只是简单地切换元素的 CSS 属性 <code>display</code>。</p>
+                <p class="tip">注意，<code>v-show</code> 不支持 <code>&lt;template&gt;</code> 元素，也不支持 <code>v-else</code>。</p>
+                <h2 id="v-if-vs-v-show"><a href="#v-if-vs-v-show" class="headerlink"><code>v-if</code> vs <code>v-show</code></a></h2>
+                <p><code>v-if</code> 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。</p>
+                <p><code>v-if</code> 也是<strong>惰性的</strong>：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</p>
+                <p>相比之下，<code>v-show</code> 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。</p>
+                <p>一般来说，<code>v-if</code> 有更高的切换开销，而 <code>v-show</code> 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</p>
+                <h2 id="v-if-与-v-for-一起使用"><a href="#v-if-与-v-for-一起使用" class="headerlink"><code>v-if</code> 与 <code>v-for</code> 一起使用</a></h2>
+                <p class="tip"><strong>不推荐</strong>同时使用 <code>v-if</code> 和 <code>v-for</code>。请查阅<a href="">风格指南</a>以获取更多信息。</p>
+                <p>当 <code>v-if</code> 与 <code>v-for</code> 一起使用时，<code>v-for</code> 具有比 <code>v-if</code> 更高的优先级。请查阅<a href="">列表渲染指南</a> 以获取详细信息。</p>
                 <div class="guide-links">
-                    <span>← <a href="">计算属性和侦听器</a></span>
-                    <span style="float: right;"><a href="">条件渲染</a> →</span>
+                    <span>← <a href="">Class 与 Style 绑定</a></span>
+                    <span style="float: right;"><a href="">列表渲染</a> →</span>
                 </div>
                 <div class="footer">
-              <div class="bsa-cpc"></div>
+              <div class="bsa-cpc"></div> 
                   发现错误？想参与编辑？
-                  <a href="" target="_blank">
+                  <a href="">
                     在 GitHub 上编辑此页！
                   </a>
                 </div>
