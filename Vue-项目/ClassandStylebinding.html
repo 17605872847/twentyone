@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class与Style绑定</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <a id="logo" href="#Vue.js"><img src="img/logo.png" alt="" /><span>Vue.js</span></a>
+            <ul id="nav">
+                <li>
+                    <form id="search-form"><input type="text" id="search-query-nav"></form>
+                </li>
+                <li class="nav-dropdown-container learn">
+                    <a class="nav-link nav-link-block">学习</a>
+                    <span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4 class="broder-none">文档</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link">教程</a></li>
+                                <li><a href="#" class="nav-link">API</a></li>
+                                <li><a href="#" class="nav-link">风格指南</a></li>
+                                <li><a href="#" class="nav-link">示例</a></li>
+                                <li><a href="#" class="nav-link">Cookbook</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>视频教程</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link">Vue Mastery (英文)</a></li>
+                                <li><a href="#" class="nav-link">Vue School (英文)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container ecosystem">
+                    <a class="nav-link">生态系统</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <h4>帮助</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link" target="_blank">论坛</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">聊天室</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">聚会</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>工具</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link" target="_blank">Devtools</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vue CLI</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vue Loader</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>核心插件</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link" target="_blank">Vue Router</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vuex</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vue 服务端渲染</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>信息</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link" target="_blank">周刊</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Roadmap</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">活动</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Twitter</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">博客</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">工作</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>资源列表</h4>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link" target="_blank">官方仓库</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vue 优选</a></li>
+                                <li><a href="#" class="nav-link" target="_blank">Vue 资源</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-link team">团队</a>
+                </li>
+                <li class="nav-dropdown-container support-vue">
+                    <a href="#" class="nav-link">支持 Vue</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <ul>
+                                <li><a href="#" class="nav-link">一次性赞助</a></li>
+                                <li><a href="#" class="nav-link">周期性赞助</a></li>
+                                <li><a href="#" class="nav-link">贴纸</a></li>
+                                <li><a href="#" target="_blank" class="nav-link">T 恤商店</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown-container language">
+                    <a class="nav-link">多语言</a><span class="arrow"></span>
+                    <ul class="nav-dropdown">
+                        <li><a href="#" class="nav-link" target="_blank">English</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">日本語</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">Русский</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">한국어</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">Português</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">Français</a></li>
+                        <li><a href="#" class="nav-link" target="_blank">Tiếng Việt</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank" class="nav-link contribute">参与翻译</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div id="main" class="fix-sidebar">
+            <div class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="list">
+                        <div id="sidebar-sponsors-special">
+                            <div class="main-sponsor">
+                                <span>特别赞助商</span>
+                                <div>
+                                    <a href="#" class="logo">
+                                        <img src="img/dcloud.gif" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>教程
+                            <select class="version-select">
+                                <option value="SELF" selected="">2.x</option>
+                                <option value="v1">1.0</option>
+                                <option value="012">0.12</option>
+                                <option value="011">0.11</option>
+                            </select>
+                        </h2>
+                        <ul class="menu-root">
+                            <li>
+                                <h3>基础</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">安装</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">介绍</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">Vue 实例</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">模板语法</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">计算属性和侦听器</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link current">Class 与 Style 绑定</a>
+                                <ul class="menu-sub">
+                                    <li><a class="section-link" href="#绑定-HTML-Class">绑定 HTML Class</a>
+                                    </li>
+                                    <ul>
+                                        <li><a class="section-link" href="#对象语法">对象语法</a></li>
+                                        <li><a class="section-link" href="#数组语法">数组语法</a></li>
+                                        <li><a class="section-link" href="#用在组件上">用在组件上</a></li>
+                                    </ul>
+                                    <li><a class="section-link" href="#绑定内联样式">绑定内联样式</a></li>
+                                    <ul>
+                                        <li><a class="section-link" href="#对象语法-1">对象语法</a></li>
+                                        <li><a class="section-link" href="#数组语法-1">数组语法</a></li>
+                                        <li><a class="section-link" href="#自动添加前缀">自动添加前缀</a></li>
+                                        <li><a class="section-link" href="#多重值">多重值</a></li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">条件渲染</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">列表渲染</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">事件处理</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">表单输入绑定</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">组件基础</a>
+                            </li>
+                            <li>
+                                <h3>深入了解组件</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">组件注册</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">Prop</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">自定义事件</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">插槽</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">动态组件 &amp; 异步组件</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">处理边界情况</a>
+                            </li>
+                            <li>
+                                <h3>过渡 &amp; 动画</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">进入/离开 &amp; 列表过渡</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">状态过渡</a>
+                            </li>
+                            <li>
+                                <h3>可复用性 &amp; 组合</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">混入</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">自定义指令</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">渲染函数 &amp; JSX</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">插件</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">过滤器</a>
+                            </li>
+                            <li>
+                                <h3>工具</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">单文件组件</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">单元测试</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">TypeScript 支持</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">生产环境部署</a>
+                            </li>
+                            <li>
+                                <h3>规模化</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">路由</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">状态管理</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">服务端渲染</a>
+                            </li>
+                            <li>
+                                <h3>内在</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">深入响应式原理</a>
+                            </li>
+                            <li>
+                                <h3>迁移</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">从 Vue 1.x 迁移</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">从 Vue Router 0.7.x 迁移</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">从 Vuex 0.6.x 迁移到 1.0</a>
+                            </li>
+                            <li>
+                                <h3>更多</h3>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">对比其他框架</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">加入 Vue.js 社区</a>
+                            </li>
+                            <li>
+                                <a href="" class="sidebar-link">认识团队</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content guide with-sidebar instance-guide">
+                <div id="ad">
+                    <span style="float: right;">广告</span>
+                    <a href="#">
+                        <img src="img/tencent-ad.png">
+                    </a>
+                </div>
+                <h1>Class与Style绑定</h1>
+                <div class="ad-pagetop">
+                    <a href="">
+                        <span class="name">TPshop</span>
+                        <span class="description">中国免费商城系统 - 搜豹商城系统</span>
+                        <span class="action">立即查看 &gt;</span>
+                    </a>
+                </div>
+                <p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 <code>v-bind</code> 处理它们：只需要通过表达式计算出字符串结果即可。不过，字符串拼接麻烦且易错。因此，在将 <code>v-bind</code> 用于 <code>class</code> 和 <code>style</code> 时，Vue.js 做了专门的增强。表达式结果的类型除了字符串之外，还可以是对象或数组。</p>
+                <h2 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class">绑定 HTML Class</a></h2>
+                <div class="vueschool"><a href="">Watch a free video lesson on Vue School</a></div>
+                <h3 id="对象语法"><a href="#对象语法" class="headerlink" title="对象语法">对象语法</a></h3>
+                <p>我们可以传给 <code>v-bind:class</code> 一个对象，以动态地切换 class：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>上面的语法表示 <code>active</code> 这个 class 存在与否将取决于数据属性 <code>isActive</code> 的 <a href="">truthiness</a>。</p>
+                <p>你可以在对象中传入更多属性来动态切换多个 class。此外，<code>v-bind:class</code> 指令也可以与普通的 class 属性共存。当有如下模板:</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"static"</span>
+  <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive, 'text-danger': hasError }"</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>和如下 data：</p>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">isActive</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">hasError</span>: <span class="hljs-literal">false</span>
+}</code></pre>
+                <p>结果渲染为：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"static active"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>当 <code>isActive</code> 或者 <code>hasError</code> 变化时，class 列表将相应地更新。例如，如果 <code>hasError</code> 的值为 <code>true</code>，class 列表将变为 <code>"static active text-danger"</code>。</p>
+                <p>绑定的数据对象不必内联定义在模板里：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"classObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">classObject</span>: {
+    <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">'text-danger'</span>: <span class="hljs-literal">false</span>
+  }
+}</code></pre>
+                <p>渲染的结果和上面一样。我们也可以在这里绑定一个返回对象的<a href="">计算属性</a>。这是一个常用且强大的模式：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"classObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">isActive</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">error</span>: <span class="hljs-literal">null</span>
+},
+<span class="hljs-attr">computed</span>: {
+  <span class="hljs-attr">classObject</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">active</span>: <span class="hljs-keyword">this</span>.isActive &amp;&amp; !<span class="hljs-keyword">this</span>.error,
+      <span class="hljs-string">'text-danger'</span>: <span class="hljs-keyword">this</span>.error &amp;&amp; <span class="hljs-keyword">this</span>.error.type === <span class="hljs-string">'fatal'</span>
+    }
+  }
+}</code></pre>
+                <h3 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法">数组语法</a></h3>
+                <p>我们可以把一个数组传给 <code>v-bind:class</code>，以应用一个 class 列表：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[activeClass, errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">activeClass</span>: <span class="hljs-string">'active'</span>,
+  <span class="hljs-attr">errorClass</span>: <span class="hljs-string">'text-danger'</span>
+}</code></pre>
+                <p>渲染为：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active text-danger"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>如果你也想根据条件切换列表中的 class，可以用三元表达式：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[isActive ? activeClass : '', errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>这样写将始终添加 <code>errorClass</code>，但是只有在 <code>isActive</code> 是 truthy<sup><a href="#footnote-1">[1]</a></sup> 时才添加 <code>activeClass</code>。</p>
+                <p>不过，当有多个条件 class 时这样写有些繁琐。所以在数组语法中也可以使用对象语法：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"[{ active: isActive }, errorClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <h3 id="用在组件上"><a href="#用在组件上" class="headerlink" title="用在组件上">用在组件上</a></h3>
+                <blockquote>
+                    <p>这个章节假设你已经对 <a href="">Vue 组件</a>有一定的了解。当然你也可以先跳过这里，稍后再回过头来看。</p>
+                </blockquote>
+                <p>当在一个自定义组件上使用 <code>class</code> 属性时，这些类将被添加到该组件的根元素上面。这个元素上已经存在的类不会被覆盖。</p>
+                <p>例如，如果你声明了这个组件：</p>
+                <pre><code class="hljs js">Vue.component(<span class="hljs-string">'my-component'</span>, {
+  <span class="hljs-attr">template</span>: <span class="hljs-string">'&lt;p class="foo bar"&gt;Hi&lt;/p&gt;'</span>
+})</code></pre>
+                <p>然后在使用它的时候添加一些 class：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"baz boo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
+                <p>HTML 将被渲染为:</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"foo bar baz boo"</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+                <p>对于带数据绑定 class 也同样适用：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">"{ active: isActive }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-component</span>&gt;</span></code></pre>
+                <p>当 <code>isActive</code> 为 truthy<sup><a href="#footnote-1">[1]</a></sup> 时，HTML 将被渲染成为：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"foo bar active"</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+                <h2 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式">绑定内联样式</a></h2>
+                <h3 id="对象语法-1"><a href="#对象语法-1" class="headerlink" title="对象语法">对象语法</a></h3>
+                <p><code>v-bind:style</code> 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"{ color: activeColor, fontSize: fontSize + 'px' }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">activeColor</span>: <span class="hljs-string">'red'</span>,
+  <span class="hljs-attr">fontSize</span>: <span class="hljs-number">30</span>
+}</code></pre>
+                <p>直接绑定到一个样式对象通常更好，这会让模板更清晰：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"styleObject"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <pre><code class="hljs js">data: {
+  <span class="hljs-attr">styleObject</span>: {
+    <span class="hljs-attr">color</span>: <span class="hljs-string">'red'</span>,
+    <span class="hljs-attr">fontSize</span>: <span class="hljs-string">'13px'</span>
+  }
+}</code></pre>
+                <p>同样的，对象语法常常结合返回对象的计算属性使用。</p>
+                <h3 id="数组语法-1"><a href="#数组语法-1" class="headerlink" title="数组语法">数组语法</a></h3>
+                <p><code>v-bind:style</code> 的数组语法可以将多个样式对象应用到同一个元素上：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"[baseStyles, overridingStyles]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <h3 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀">自动添加前缀</a></h3>
+                <p>当 <code>v-bind:style</code> 使用需要添加<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Vendor_Prefix" target="_blank" rel="noopener">浏览器引擎前缀</a>的 CSS 属性时，如 <code>transform</code>，Vue.js 会自动侦测并添加相应的前缀。</p>
+                <h3 id="多重值"><a href="#多重值" class="headerlink" title="多重值">多重值</a></h3>
+                <blockquote>
+                    <p>2.3.0+</p>
+                </blockquote>
+                <p>从 2.3.0 起你可以为 <code>style</code> 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值，例如：</p>
+                <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">"{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+                <p>这样写只会渲染数组中最后一个被浏览器支持的值。在本例中，如果浏览器支持不带浏览器前缀的 flexbox，那么就只会渲染 <code>display: flex</code>。</p>
+                <p><small><br><strong>译者注</strong><br><a id="footnote-1"></a>[1] truthy 不是 <code>true</code>，详见 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy" target="_blank" rel="noopener">MDN</a> 的解释。<br></small></p>
+                <div class="guide-links">
+                    <span>← <a href="">计算属性和侦听器</a></span>
+                    <span style="float: right;"><a href="">条件渲染</a> →</span>
+                </div>
+                <div class="footer">
+              <div class="bsa-cpc"></div>
+                  发现错误？想参与编辑？
+                  <a href="" target="_blank">
+                    在 GitHub 上编辑此页！
+                  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
