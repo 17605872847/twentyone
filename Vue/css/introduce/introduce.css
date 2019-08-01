@@ -1,0 +1,408 @@
+pre code .hljs-tag pre code .hljs-value,
+pre code .hljs-comment,
+pre code .hljs-java pre code .hljs-annotation,
+pre code .hljs-python pre code .hljs-decorator,
+pre code .hljs-template_comment,
+pre code .hljs-pi,
+pre code .hljs-doctype,
+pre code .hljs-deletion,
+pre code .hljs-shebang,
+pre code .hljs-apache pre code .hljs-sqbracket,
+pre code .hljs-tex pre code .hljs-formula {
+    color: #707070;
+}
+
+pre code .hljs-tag,
+pre code .hljs-tag pre code .hljs-title,
+pre code .hljs-change,
+pre code .hljs-winutils,
+pre code .hljs-flow,
+pre code .hljs-tex pre code .hljs-special {
+    color: #2973b7;
+}
+
+pre code .hljs-symbol,
+pre code .hljs-symbol pre code .hljs-string,
+pre code .hljs-value,
+pre code .hljs-regexp,
+pre code .hljs-string,
+pre code .hljs-subst,
+pre code .hljs-haskell pre code .hljs-type,
+pre code .hljs-preprocessor,
+pre code .hljs-ruby pre code .hljs-class pre code .hljs-parent,
+pre code .hljs-built_in,
+pre code .hljs-sql pre code .hljs-aggregate,
+pre code .hljs-django pre code .hljs-template_tag,
+pre code .hljs-django pre code .hljs-variable,
+pre code .hljs-smalltalk pre code .hljs-class,
+pre code .hljs-javadoc,
+pre code .hljs-django pre code .hljs-filter pre code .hljs-argument,
+pre code .hljs-smalltalk pre code .hljs-localvars,
+pre code .hljs-smalltalk pre code .hljs-array,
+pre code .hljs-attr_selector,
+pre code .hljs-pseudo,
+pre code .hljs-addition,
+pre code .hljs-stream,
+pre code .hljs-envvar,
+pre code .hljs-apache pre code .hljs-tag,
+pre code .hljs-apache pre code .hljs-cbracket,
+pre code .hljs-tex pre code .hljs-command,
+pre code .hljs-prompt {
+    color: #42b983;
+}
+
+.colorgreen{
+    color: #42b983;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    border-bottom: 1px solid silver;
+    z-index: 999;
+}
+
+#header {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    height: 40px;
+    padding: 10px 60px;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img {
+    vertical-align: middle;
+    margin-right: 6px;
+    width: 40px;
+    height: 40px;
+}
+
+#search-query-nav {
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 0 15px 0 30px;
+    border: 1px solid #e3e3e3;
+    color: #273849;
+    outline: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: border-color 0.2s ease;
+    background: #fff url(../../img/index/search.png) 8px 5px no-repeat;
+    background-size: 20px;
+    vertical-align: middle !important;
+}
+
+#nav .nav-link-block {
+    border-bottom: 3px solid #42b983;
+}
+
+#main {
+    z-index: 1;
+    padding: 0 60px 30px;
+    overflow-x: hidden;
+}
+
+#main.fix-sidebar .sidebar {
+    position: fixed;
+}
+
+.sidebar {
+    z-index: 10;
+    top: 61px;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar .sidebar-inner {
+    width: 260px;
+    padding: 70px 0px 60px 20px;
+}
+
+#sidebar-sponsors-special {
+    margin-top: -10px;
+}
+
+.main-sponsor {
+    color: #4f5959;
+    font-size: 0.85em;
+}
+
+.main-sponsor .logo:last-child {
+    margin-bottom: 20px;
+}
+
+.main-sponsor .logo:first-child {
+    margin-top: 18px;
+}
+
+.main-sponsor .logo {
+    color: #4f5959;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+.main-sponsor img,
+.main-sponsor a {
+    width: 200px;
+}
+
+.sidebar h2 {
+    margin-top: 0.2em;
+}
+
+.sidebar .version-select {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.sidebar .menu-root {
+    padding-left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.5em;
+    padding-left: 1em;
+}
+
+.sidebar li {
+    margin-top: 0.5em;
+}
+
+.sidebar .sidebar-link.current {
+    font-weight: 600;
+    color: #42b983;
+}
+
+.sidebar .sidebar-link {
+    color: #4f5959;
+}
+
+.content {
+    position: relative;
+    padding: 2.2em 0;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+#ad {
+    width: 150px;
+    position: fixed;
+    z-index: 99;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+#ad span {
+    color: #4f5959;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#ad a {
+    display: inline-block;
+    color: #4f5959;
+    font-weight: normal;
+}
+
+#ad img {
+    width: 150px;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content p,
+.content ul,
+.content ol {
+    line-height: 1.6em;
+    margin: 1.2em 0 -1.2em;
+    padding-bottom: 1.2em;
+    position: relative;
+    z-index: 1;
+}
+
+.content h1 {
+    margin: 1.9em 0 0 0;
+    font-size: 32px;
+}
+
+.content p a {
+    color: #42b983;
+    font-weight: 600;
+}
+
+.content h2 {
+    margin: 45px 0 0.8em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid #ddd;
+}
+
+.tip {
+    border-left-color: #f66;
+}
+
+.tip:before {
+    content: "!";
+    background-color: #f66;
+}
+
+.tip:before,
+.content p.success:before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tip,
+.content .success {
+    padding: 12px 24px 12px 30px;
+    margin: 2em 0;
+    border-left-width: 4px;
+    border-left-style: solid;
+    background-color: #f8f8f8;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.content a.button {
+    font-size: 0.9em;
+    color: #fff;
+    margin: 0.2em 0;
+    width: 200px;
+    text-align: center;
+    padding: 12px 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5%;
+}
+
+pre {
+    border-radius: 2px;
+    position: relative;
+}
+
+code, pre {
+    font-family: "Roboto Mono";
+    font-size: 0.85rem;
+    background-color: #f8f8f8;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+}
+
+pre code {
+    overflow-x: auto;
+    color: #525252;
+    white-space: pre;
+    padding: 1.2em 1.4em;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    display: block;
+}
+
+code {
+    color: #d63200;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.hljs::before {
+    content: "HTML";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 0.5em;
+    padding: 5px 10px 0;
+    line-height: 15px;
+    height: 15px;
+    font-weight: 600;
+}
+
+.js::before {
+    content: "JS";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 0.5em;
+    padding: 5px 10px 0;
+    line-height: 15px;
+    height: 15px;
+    font-weight: 600;
+}
+
+.scrimba, .vueschool {
+    background-color: #e7ecf3;
+    padding: 1em 1.25em;
+    border-radius: 2px;
+    color: #486491;
+    position: relative;
+}
+
+#demo, .demo, .content .demo {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 25px 35px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: auto;
+}
+
+.guide-links {
+    margin-top: 2em;
+    height: 1em;
+}
+
+.guide-links a{
+    color: #42b983;
+    font-weight: 600;
+}
+
+.footer{
+    color: #4f5959;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer a{
+    color: #42b983;
+    font-weight: 600;
+}

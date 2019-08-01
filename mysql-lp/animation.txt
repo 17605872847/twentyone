@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="css/animation/animation.css">
+
+            <div class="head-two">
+                <div class="head-left-two">
+                    <a href="index.html">主页</a>
+                    <p>/</p>
+                    <span>组件</span>
+                    <p>/</p>
+                    <span>动画</span>
+                </div>
+            </div>
+            <div class="content-down-box">
+                <div class="content-down">
+                    <div class="animation-box">
+                        <div class="animation-cen">
+                            <div class="TopIntroduction">
+                                <p>按钮主题</p>
+                            </div>
+                            <div class="Bottombox">
+                                <ul class="Bottombox-ball">
+                                    <li>
+                                        <div class="anim anim-up">从最底部往上滑入</div>
+                                        <div class="code">anim-up</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-upbit">微微往上滑入</div>
+                                        <div class="code">anim-upbit</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-scale">平滑放大</div>
+                                        <div class="code">anim-scale</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-scaleSpring">弹簧式放大</div>
+                                        <div class="code">anim-scaleSpring</div>
+                                    </li>
+                                </ul>
+                                <ul class="Bottombox-ball">
+                                    <li>
+                                        <div class="anim anim-fadein">渐现</div>
+                                        <div class="code">anim-fadein</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-fadeout">渐隐</div>
+                                        <div class="code">anim-fadeout</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-rotate">360度旋转</div>
+                                        <div class="code">anim-rotate</div>
+                                    </li>
+                                    <li>
+                                        <div class="anim anim-loop anim-rotatea">循环动画</div>
+                                        <div class="code">anim-loop</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<script src="script/animation.js"></script>

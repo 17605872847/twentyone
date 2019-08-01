@@ -1,0 +1,701 @@
+.icon-dashboard_line:before {
+    content: "\e615";
+    font-size: 35px;
+}
+
+.icon-chart:before {
+    content: "\e628";
+    font-size: 35px;
+}
+
+.icon-templat:before {
+    content: "\e6be";
+    font-size: 40px;
+}
+
+.icon-chat:before {
+    content: "\e624";
+    font-size: 35px;
+}
+
+.icon-zhinanzhen:before {
+    content: "\e61e";
+    font-size: 35px;
+}
+
+.icon-survey:before {
+    content: "\e606";
+    font-size: 35px;
+}
+
+.icon-use:before {
+    content: "\e649";
+    font-size: 35px;
+}
+
+.icon-shezh:before {
+    content: "\e66f";
+    font-size: 35px;
+}
+
+.console-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: all .2s;
+}
+
+.console-one-left {
+    width: 65%;
+    height: 1253px;
+    padding:7.5px 0 7.5px 7.5px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .1s;
+}
+
+.console-one-left-shortcut-box{
+    width: 50%;
+    padding: 7.5px;
+    max-height: 270px;
+}
+
+.console-one-left-shortcut-box .console-one-left-shortcut {
+    width: 100%;
+}
+
+.TopIntroduction{
+    position: relative;
+    width: 100%;
+    height: 43px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.Balloption {
+    width: 45px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Balloption li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#Balloption-two {
+    width: 45px;
+    display: flex;
+    justify-content: space-around;
+    transition: all .5s;
+}
+
+#Balloption-two li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.TopIntroduction-content1-box{
+    width: 100%;
+    overflow: hidden;
+}
+
+.TopIntroduction-content1 {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 220px;
+    padding: 10px 15px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .3s;
+}
+
+.TopIntroduction-content1 div {
+    width: 23.7%;
+    margin-left: 1.2%;
+    text-align: center;
+}
+
+.TopIntroduction-content1 div a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #F8F8F8;
+    color: #333;
+}
+
+.TopIntroduction-content1 div a:hover{
+    background: #f2f2f2;
+}
+
+.TopIntroduction-content1 div p {
+    line-height: 34px;
+}
+
+.TopIntroduction-content1-two {
+    position: relative;
+    left: 100%;
+    top: -220px;
+    width: 100%;
+    height: 220px;
+    padding: 10px 15px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .3s;
+}
+
+.TopIntroduction-content1-two div {
+    width: 23.7%;
+    margin-left: 1.2%;
+    text-align: center;
+}
+
+.TopIntroduction-content1-two div a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #F8F8F8;
+    color: #333;
+    cursor: pointer;
+}
+
+.TopIntroduction-content1-two div a:hover{
+    background: #f2f2f2;
+}
+
+.TopIntroduction-content1-two div p {
+    line-height: 34px;
+}
+
+.console-one-left-matter-box{
+    width: 50%;
+    padding: 7.5px;
+    max-height: 263px;
+}
+
+.console-one-left-matter-box .console-one-left-matter {
+    width: 100%;
+}
+
+.TopIntroduction-content2-box{
+    width: 100%;
+    overflow: hidden;
+}
+
+.TopIntroduction-content2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    padding: 10px 15px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .3s
+}
+
+.TopIntroduction-content2 div {
+    width: 47%;
+    height: 92px;
+    margin-left: 2%;
+    display: block;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    color: #999;
+    border-radius: 2px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.TopIntroduction-content2 div:hover{
+    background: #f2f2f2;
+}
+
+.TopIntroduction-content2 div cite {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    color: #009688;
+    margin-top: 1.5%;
+}
+
+.TopIntroduction-content2-two{
+    position: relative;
+    top: -220px;
+    left: 100%;
+    width: 100%;
+    height: 220px;
+    padding: 10px 15px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .3s
+}
+
+.TopIntroduction-content2-two div {
+    width: 47%;
+    height: 92px;
+    margin-left: 2%;
+    display: block;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    color: #999;
+    border-radius: 2px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.TopIntroduction-content2-two div:hover{
+    background-color: #f2f2f2;
+}
+
+.TopIntroduction-content2-two div cite {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FF5722;
+    margin-top: 1.5%;
+}
+
+.console-one-left-down {
+    position: relative;
+    height: 945px;
+    width: 100%;
+    padding:7.5px;
+}
+
+.console-one-left-down .console-one-left-data2 {
+    width: 100%;
+    height: 395px;
+    margin-bottom: 12px;
+}
+
+.TopIntroduction-content3 {
+    width: 100%;    
+    line-height: 24px;
+    background: white;
+    text-align: center;
+}
+
+.Datagraph {
+    text-align: center;
+    padding: 7.5px;
+    height: 287px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.TopIntroduction-content3 .Datagraph p {
+    display: inline-block;
+}
+
+#container{
+    width:1000%;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    display: block;
+}
+
+#containe{
+    width:1000%;
+    height: 287px;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    display: none;
+}
+
+#contain{
+    width:1000%;
+    height: 287px;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    display: none;
+}
+
+.console-one-left-down .console-one-left-hotsearch {
+    width: 100%;
+    height: 543px;
+    background: white;
+}
+
+.TopIntroduction-content4 {
+    width: 100%;
+    height: 220px;
+    padding: 10px 15px;
+    background: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TopIntroduction2 {
+    position: relative;
+    width: 100%;
+    height: 43px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.TopIntroduction2 p {
+    display: inline-block;
+    color: black;
+    cursor: pointer;
+    width: 65px;
+    height: 42px;
+    padding: 0;
+    line-height: 42px;
+}
+
+.TopIntroduction2 p:nth-child(1) {
+    border-bottom: 2px solid #009688;
+}
+
+.console-one-right {
+    padding: 7.5px 0 7.5px 7.5px;
+    width: 35%;
+}
+
+.Versionevents-box{
+    padding: 7.5px;
+    width: 100%;
+}
+
+.Versionevents {
+    width: 100%;
+    background: white;
+}
+
+.Versionevents-content {
+    line-height: 22px;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.Versionevents-content table {
+    width: 100%;
+    background-color: #fff;
+    color: #666;
+    margin: 5px 0;
+    border: 1px solid #ebebeb;
+}
+
+.Versionevents-content tr {
+    transition: all .3s
+}
+
+.Versionevents-content tr td {
+    position: relative;
+    padding: 9px 15px;
+    min-height: 20px;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.Versionevents-content tr:hover {
+    background-color: #f2f2f2;
+    transition: all .3s
+}
+
+.btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 9px;
+}
+
+.btn:first-child {
+    background-color: #FF5722;
+    margin-right: 10px;
+}
+
+.EffectivenessReport-box{
+    width: 100%;
+    padding: 7.5px;
+}
+
+.EffectivenessReport {
+    width: 100%;
+    height: 188px;
+    background: white;
+}
+
+.EffectivenessReport-content {
+    width: 100%;
+    height: 147px;
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.EffectivenessReport-content1 {
+    position: relative;
+    top: 45px;
+    left: 0;
+    height: 6px;
+    border-radius: 20px;
+    background: #e2e2e2;
+}
+
+.content-green {
+    position: absolute;
+    width: 65%;
+    left: 0;
+    right: 0;
+    top: 0px;
+    height: 6px;
+    border-radius: 20px;
+    background: #5fb878;
+    z-index: 100;
+}
+
+.content-green2 {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    right: 0;
+    top: 39px;
+    height: 6px;
+    border-radius: 20px;
+    background: #5fb878;
+    z-index: 100;
+}
+
+.content-red {
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    top: 39px;
+    height: 6px;
+    border-radius: 20px;
+    background: red;
+    z-index: 100;
+}
+
+.EffectivenessReport-content1 h3 {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.EffectivenessReport-content1 .EffectivenessReport-content1-cen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -38px;
+    color: black;
+    font-size: 14px;
+}
+
+.EffectivenessReport-content1 .EffectivenessReport-content1-text {
+    top: -35px;
+    line-height: 26px;
+    font-size: 26px;
+    color: #666666;
+}
+
+.EffectivenessReport-content2 {
+    position: relative;
+    top: 105px;
+    left: 0;
+    height: 6px;
+    border-radius: 20px;
+    background: #e2e2e2;
+}
+
+.EffectivenessReport-content2 h3 {
+    position: absolute;
+    right: 0;
+    top: -33px;
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.EffectivenessReport-content2 .EffectivenessReport-content1-cen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -38px;
+    color: black;
+    font-size: 14px;
+}
+
+.EffectivenessReport-content2 .EffectivenessReport-content1-text {
+    top: -35px;
+    line-height: 26px;
+    font-size: 26px;
+    color: #666666;
+}
+
+.realtimemonitoring-box{
+    width: 100%;
+    padding: 7.5px;
+}
+
+.realtimemonitoring {
+    width: 100%;
+    height: 188px;
+    background: white;
+}
+
+.realtimemonitoring-content {
+    width: 100%;
+    height: 147px;
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.ProductDynamics-box{
+    width: 100%;
+    padding: 7.5px;
+}
+
+.ProductDynamics {
+    width: 100%;
+    height: 133px;
+}
+
+.ProductDynamics-content {
+    position: relative;
+    height: 90px;
+    padding: 10px 15px;
+    line-height: 24px;
+    background: white;
+}
+
+#ProductDynamics-content-text-one {
+    width: 100%;
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    background: #ff5722;
+    transition: all .9s;
+    /* background: #009688;
+    background: #1E9FFF; */
+}
+
+.authorheartlanguage-box{
+    width: 100%;
+    padding: 7.5px;
+}
+
+.authorheartlanguage {
+    width: 100%;
+    background: white;
+}
+
+.authorheartlanguage-content {
+    line-height: 22px;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.authorheartlanguage-content p{
+    margin-bottom: 10px;
+    text-indent: 2em;
+}
+
+.authorheartlanguage-content p a{
+    color: #1E9FFF;
+}
+
+#bottomtab{   
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 7.5px;
+    height: 430px;
+    overflow: hidden;
+}
+#bottomtab-ul{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    display: flex; 
+    background: white;
+}
+#bottomtab-ul li{
+    line-height: 42px;
+    margin:0 15px; 
+    display: inline-block;
+}
+
+#bottomtab-content{
+    padding: 15px;
+    width:100%;
+    background: white;
+    overflow-x: scroll;  
+    /* 内容会被裁剪，会以滚动条显示 */ 
+    overflow-y: hidden;  /* 超出内容不可见 */ 
+    white-space: nowrap;  /* 不换行 */ 
+    /* 文本不会换行，会在同一行上继续，直到遇到<br>为止 */ 
+}
+#bottomtab-content table{
+    width:100%;
+    border:1px solid #e6e6e6;
+}
+
+#bottomtab-content tr{
+    border:1px solid #e6e6e6;
+    transition: all .3s;
+}
+#bottomtab-content tr :first-child{
+    border:1px solid #e6e6e6;
+}
+#bottomtab-content td{
+    height: 36px;
+    text-align: left;
+    padding-left:15px;
+}
+
+#bottomtab-content tr:hover{
+    background: rgb(242, 242, 242);
+    transition: all .3s;
+}

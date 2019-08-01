@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>控制台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/index/iconfont.css">
+    <script src="script/echarts.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="right-column-box">
+            <div class="right-column">
+                <div class="logo">LPAdmin Pro</div>
+                <dl class="list_dl">
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-zhuye"></div>
+                        </span>
+                        <p>主页</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li" id="console">控制台</li>
+                            <a href="#">
+                                <li class="list_li" id="page-one"><a href="#">主页一</a></li>
+                            </a>
+                            <li class="list_li">主页二</li>
+                        </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-peijian"></div>
+                        </span>
+                        <p>组件</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>栅格</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">等比例列表排列</li>
+                            <li class="list_li">按移动端排列</li>
+                            <li class="list_li">移动桌面端组合</li>
+                            <li class="list_li">全段复杂组合</li>
+                            <li class="list_li">低于桌面堆叠排列</li>
+                            <li class="list_li">九宫格</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <a href="Button.html">
+                        <li class="list_li" id="button"><a href="#">按钮</a></li>
+                    </a>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>表单</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">表单元素</li>
+                            <li class="list_li">表单组合</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <li class="list_li">导航</li>
+                    <li class="list_li">选项卡</li>
+                    <li class="list_li">进度条</li>
+                    <li class="list_li">面板</li>
+                    <li class="list_li">徽章</li>
+                    <li class="list_li">时间线</li>
+                    <li class="list_li" id="animation"><a href="#">动画</a></li>
+                    <li class="list_li" id="auxiliary"><a href="#">辅助</a></li>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>通用弹层</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">功能演示</li>
+                            <li class="list_li">特殊示例</li>
+                            <li class="list_li">风格定制</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>日期时间</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">功能演示一</li>
+                            <li class="list_li">功能演示二</li>
+                            <li class="list_li">设定主题</li>
+                            <li class="list_li">特殊示例</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>表格</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">简单数据表格</li>
+                            <li class="list_li">列宽自动分配</li>
+                            <li class="list_li">赋值已知数据</li>
+                            <li class="list_li">转化静态表格</li>
+                            <li class="list_li">开启分页</li>
+                            <li class="list_li">自定义分页</li>
+                            <li class="list_li">开启头部工具栏</li>
+                            <li class="list_li">开启合计行</li>
+                            <li class="list_li">高度最大适应</li>
+                            <li class="list_li">开启复选框</li>
+                            <li class="list_li">开启单选框</li>
+                            <li class="list_li">开启单元格编辑</li>
+                            <li class="list_li">加入表单元素</li>
+                            <li class="list_li">设置单元格样式</li>
+                            <li class="list_li">固定列</li>
+                            <li class="list_li">数据操作</li>
+                            <li class="list_li">解析任意数据格式</li>
+                            <li class="list_li">监听行事件</li>
+                            <li class="list_li">数据表格的重载</li>
+                            <li class="list_li">设置初始排序</li>
+                            <li class="list_li">监听单元格事件</li>
+                            <li class="list_li">复杂表头</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>分页</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">表单元素</li>
+                            <li class="list_li">表单组合</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <dt class="list_dtt">
+                        <span class="_after"></span>
+                        <p>上传</p>
+                        <i class="iconfont icon-triangle"></i>
+                    <dd class="list_ddd">
+                        <ul>
+                            <li class="list_li">表单元素</li>
+                            <li class="list_li">表单组合</li>
+                        </ul>
+                    </dd>
+                    </dt>
+                    <li class="list_li">颜色选择器</li>
+                    <li class="list_li">滑块组件</li>
+                    <li class="list_li">评分</li>
+                    <li class="list_li">轮播</li>
+                    <li class="list_li">流加载</li>
+                    <li class="list_li">工具</li>
+                    <li class="list_li">代码修饰</li>
+                    <li class="list_li">即时聊天</li>
+                    </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-template"></div>
+                        </span>
+                        <p>页面</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li" id="ListofGoods"><a href="#">商品列表</a></li>
+                            <li class="list_li" id="Maillist"><a href="#">通讯录</a></li>
+                            <li class="list_li" id="MessageBoard"><a href="#">留言板</a></li>
+                            <li class="list_li">prependTo</li>
+                            <li class="list_li">after</li>
+                            <li class="list_li">before</li>
+                        </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-APP"></div>
+                        </span>
+                        <p>应用</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li">ready</li>
+                            <li class="list_li">on</li>
+                            <li class="list_li">off</li>
+                            <li class="list_li">bind</li>
+                            <li class="list_li">one</li>
+                            <li class="list_li">trigger</li>
+                            <li class="list_li">hover</li>
+                            <li class="list_li">click</li>
+                            <li class="list_li">focus</li>
+                        </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-senior"></div>
+                        </span>
+                        <p>高级</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li">$.ajax</li>
+                            <li class="list_li">$.get</li>
+                            <li class="list_li">$.getJSON</li>
+                            <li class="list_li">$.getScript</li>
+                            <li class="list_li">$.post</li>
+                        </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-user"></div>
+                        </span>
+                        <p>用户</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li">show</li>
+                            <li class="list_li">hide</li>
+                            <li class="list_li">toggle</li>
+                            <li class="list_li">slideDown</li>
+                            <li class="list_li">slideUp</li>
+                            <li class="list_li">slideToggle</li>
+                            <li class="list_li">fadeIn</li>
+                            <li class="list_li">fadeOut</li>
+                            <li class="list_li">fadeTo</li>
+                            <li class="list_li">fadeToggle</li>
+                            <li class="list_li">stop</li>
+                        </ul>
+                    </dd>
+                    <dt class="list_dt">
+                        <span class="_after"></span>
+                        <span>
+                            <div class="iconfont icon-shezhi"></div>
+                        </span>
+                        <p>设置</p>
+                        <i class="iconfont icon-triangle"></i>
+                    </dt>
+                    <dd class="list_dd">
+                        <ul>
+                            <li class="list_li">show</li>
+                            <li class="list_li">hide</li>
+                            <li class="list_li">toggle</li>
+                            <li class="list_li">slideDown</li>
+                            <li class="list_li">slideUp</li>
+                            <li class="list_li">slideToggle</li>
+                            <li class="list_li">fadeIn</li>
+                            <li class="list_li">fadeOut</li>
+                            <li class="list_li">fadeTo</li>
+                            <li class="list_li">fadeToggle</li>
+                            <li class="list_li">stop</li>
+                            <li class="list_li">show</li>
+                            <li class="list_li">hide</li>
+                            <li class="list_li">toggle</li>
+                            <li class="list_li">slideDown</li>
+                            <li class="list_li">slideUp</li>
+                            <li class="list_li">slideToggle</li>
+                            <li class="list_li">fadeIn</li>
+                            <li class="list_li">fadeOut</li>
+                            <li class="list_li">fadeTo</li>
+                            <li class="list_li">fadeToggle</li>
+                            <li class="list_li">stop</li>
+                            <li class="list_li">show</li>
+                            <li class="list_li">hide</li>
+                            <li class="list_li">toggle</li>
+                            <li class="list_li">slideDown</li>
+                            <li class="list_li">slideUp</li>
+                            <li class="list_li">slideToggle</li>
+                            <li class="list_li">fadeIn</li>
+                            <li class="list_li">fadeOut</li>
+                            <li class="list_li">fadeTo</li>
+                            <li class="list_li">fadeToggle</li>
+                            <li class="list_li">stop</li>
+                            <li class="list_li">show</li>
+                            <li class="list_li">hide</li>
+                            <li class="list_li">toggle</li>
+                            <li class="list_li">slideDown</li>
+                            <li class="list_li">slideUp</li>
+                            <li class="list_li">slideToggle</li>
+                            <li class="list_li">fadeIn</li>
+                            <li class="list_li">fadeOut</li>
+                            <li class="list_li">fadeTo</li>
+                            <li class="list_li">fadeToggle</li>
+                            <li class="list_li">stop</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="head">
+            <div class="head-left">
+                <a href="#"><i id="open" class="iconfont icon-shrink-right"></i></a>
+                <a href="#"><i class="iconfont icon-wangluo"></i></a>
+                <a href=""><i class="iconfont icon-shuaxin"></i></a>
+                <div class="head-left-search">
+                    <input type="text" placeholder="搜索...">
+                </div>
+            </div>
+            <div class="head-right">
+                <a href="#"><i class="iconfont icon-lingdang"></i></a>
+                <a href="#"><i class="iconfont icon-747bianjiqi_tuya"></i></a>
+                <a href="#"><i class="iconfont icon-biaoqian"></i></a>
+                <a href="#"><i class="iconfont icon-quanping"></i></a>
+                <div class="head-right-name">贤心<i class="iconfont icon-triangle"></i></div>
+                <a href="#"><i class="iconfont icon-moreif"></i></a>
+
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="content-box">
+            <div class="console-one">
+                <div class="console-one-left">
+                    <div class="console-one-left-shortcut-box">
+                        <!-- 快捷方式 -->
+                        <div class="console-one-left-shortcut">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>快捷方式</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="TopIntroduction-content1-hover" style="background: #999"></li>
+                                    <li class="TopIntroduction-content1-two-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 快捷方式内容 -->
+                            <div class="TopIntroduction-content1-box">
+                                <div class="TopIntroduction-content1">
+                                    <div><a href="#"><i class="iconfont icon-dashboard_line"></i></a>
+                                        <p>主页一</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-chart"></i></a>
+                                        <p>主页二</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-templat"></i></a>
+                                        <p>弹层</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-chat"></i></a>
+                                        <p>聊天</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-zhinanzhen"></i></a>
+                                        <p>进度条</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-survey"></i></a>
+                                        <p>工单</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-use"></i></a>
+                                        <p>用户</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                </div>
+                                <div class="TopIntroduction-content1-two">
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 待办事项 -->
+                    <div class="console-one-left-matter-box">
+                        <div class="console-one-left-matter">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>待办事项</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="console-one-left-matter-hover" style="background: #999"></li>
+                                    <li class="console-one-left-mattertwo-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 待办事项内容 -->
+                            <div class="TopIntroduction-content2-box">
+                                <div class="TopIntroduction-content2">
+                                    <div><a href="#"></a>
+                                        <p>待审评论</p><cite>66</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待审帖子</p><cite>12</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待审商品</p><cite>99</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待发货</p><cite>20</cite>
+                                    </div>
+                                </div>
+                                <div class="TopIntroduction-content2-two">
+                                    <div><a href="#"></a>
+                                        <p>待审友情链接</p><cite>5</cite>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="console-one-left-down">
+                        <!-- 数据概览 -->
+                        <div class="console-one-left-data2">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>数据概览</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="TopIntroduction-content3-one-hover" style="background: #999"></li>
+                                    <li class="TopIntroduction-content3-two-hover"></li>
+                                    <li class="TopIntroduction-content3-three-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 数据概览内容 -->
+                            <div class="TopIntroduction-content3">
+                                <p>今日流量趋势</p>
+                                <div class="Datagraph">
+                                    <div id="container"></div>
+                                    <div id="containe"></div>
+                                    <div id="contain"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 今日热搜 -->
+                        <div class="console-one-left-hotsearch-box">
+                            <div class="console-one-left-hotsearch">
+                                <!-- 顶部介绍栏 -->
+                                <div class="TopIntroduction2">
+                                    <p>今日热搜</p>
+                                    <p>今日热帖</p>
+                                </div>
+                                <div id="bottomtab">
+                                    <div id="bottomtab-content">
+                                        <table style="border-collapse:collapse;">
+                                            <tr style="background: rgb(242, 242, 242)">
+                                                <td style="width:40px;"></td>
+                                                <td style="width: 341px">关键词</td>
+                                                <td style="width: 341px">搜索次数</td>
+                                                <td style="margin-right:20px">用户数</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td style="color: #01AAED">贤心是男是女</td>
+                                                <td>8520</td>
+                                                <td>2216</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td style="color: #01AAED">Java程序员能找到女朋友吗</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td style="color: #01AAED">此表格是静态模拟数据</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="console-one-right">
+                    <div class="Versionevents-box">
+                        <div class="Versionevents">
+                            <div class="TopIntroduction">
+                                <p>版本信息</p>
+                            </div>
+                            <div class="Versionevents-content">
+                                <table border="1">
+                                    <tr>
+                                        <td>当前版本</td>
+                                        <td>v1.2.1 pro <a href="" style="color: #01AAED"> 更新日志</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>基于框架</td>
+                                        <td>layui-v2.4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>主要特色</td>
+                                        <td>单页面 / 响应式 / 清爽 / 极简</td>
+                                    </tr>
+                                    <tr>
+                                        <td>获取渠道</td>
+                                        <td>
+                                            <div class="btn-box">
+                                                <a class="btn" href="">获取授权</a>
+                                                <a class="btn" href="">立即下载</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="EffectivenessReport-box">
+                        <div class="EffectivenessReport">
+                            <div class="TopIntroduction">
+                                <p>效果报告</p>
+                            </div>
+                            <div class="EffectivenessReport-content">
+                                <div class="EffectivenessReport-content1">
+                                    <h3>转化率(日同比 28%<span></span><i class="iconfont icon-sanjiaoxing"></i>)</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">65%</span></div>
+                                    <span class="content-green"></span>
+                                </div>
+                                <div class="EffectivenessReport-content2">
+                                    <h3>签到率(日同比 11%<span></span><i class="iconfont icon-daosanjiao"></i>)</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">32%</span>
+                                        <span class="content-green2"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="realtimemonitoring-box">
+                        <div class="realtimemonitoring">
+                            <div class="TopIntroduction">
+                                <p>实时监控</p>
+                            </div>
+                            <div class="realtimemonitoring-content">
+                                <div class="EffectivenessReport-content1">
+                                    <h3>CPU使用率</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">58%</span></div>
+                                    <span class="content-green"></span>
+                                </div>
+                                <div class="EffectivenessReport-content2">
+                                    <h3>内存占用率</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">90%</span>
+                                        <span class="content-red"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ProductDynamics-box">
+                        <div class="ProductDynamics">
+                            <div class="TopIntroduction">
+                                <p>产品动态</p>
+                                <!-- 圆形选项 -->
+                                <ul id="Balloption-two">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="ProductDynamics-content">
+                                <div id="ProductDynamics-content-text-one">
+                                    layuiAdmin 快速上手文档
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="authorheartlanguage-box">
+                        <div class="authorheartlanguage">
+                            <div class="TopIntroduction">
+                                <p>作者心语</p>
+                                <i class="iconfont icon-peijia"></i>
+                            </div>
+                            <div class="authorheartlanguage-content">
+                                <p>一直以来，LP 秉承无偿开源的初心，虔诚致力于服务各层次前后端 Web
+                                    开发者，在商业横飞的当今时代，这一信念从未动摇。即便身单力薄，仍然重拾决心，埋头造轮，以尽可能地填补产品本身的缺口。
+                                </p>
+                                <p>在过去的一段的时间，我一直在寻求持久之道，已维持你眼前所见的一切。而 LPAdmin 是我们尝试解决的手段之一。我相信真正有爱于 LP 生态的你，定然不会错过这一拥抱吧。
+                                </p>
+                                <p>子曰：君子不用防，小人防不住。请务必通过官网正规渠道，获得<a href="">LPAdmin</a>!</p>
+                                <p>—— 贤心(<a href="">lp-twenty-one.cn</a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script/jquery-1.12.4.js"></script>
+<script src="script/public.js"></script>
+<script src="script/index.js"></script>
+<script>
+    //AJAX
+    //主页一
+    $('#page-one').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "HomePage-One.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //主页一
+
+    //控制台
+    $('#console').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "console.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //控制台
+
+    //按钮
+    $('#button').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "button.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //按钮
+
+    //动画
+    $('#animation').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "animation.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //动画
+
+    //辅助
+    $('#auxiliary').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "auxiliary.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //辅助
+
+    //商品列表
+    $('#ListofGoods').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "ListofGoods.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //商品列表
+
+    //通讯录
+    $('#Maillist').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "Maillist.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //通讯录
+
+    //留言板
+    $('#MessageBoard').click(() => {
+        $.ajax({
+            type: "GET", //默认get
+            url: "MessageBoard.txt", //默认当前页
+            textType: "text",
+            success: function (response) { //请求成功回调
+                $('.content-box').html(response)
+                console.log(response)
+            },
+            error: function (e) { //请求超时回调
+                console.log(e)
+            }
+        });
+    });
+    //留言板
+    //AJAX
+</script>
+
+</html>

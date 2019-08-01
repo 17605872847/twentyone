@@ -1,0 +1,266 @@
+
+.head-two {
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.head-left-two{
+    height: 50px;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.head-left-two a{
+    color: #BBB;
+    margin-right: 0.3%;
+}
+
+.head-left-two p{
+    color: #BBB;
+    margin-right: 0.3%;
+}
+
+.head-left-two span{
+    color: #666;
+    margin-right: 0.3%;
+}
+
+.content-down-box {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content-down {
+    width: 100%;
+    margin: -7.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-down-left {
+    width: 66.6%;
+    padding: 7.5px;
+}
+
+.content-down-left-up {
+    margin-bottom: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.TopIntroduction {
+    position: relative;
+    height: 43px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.TopIntroduction a {
+    color: #01AAED;
+}
+
+.Recentupdates-box {
+    width: 100%;
+    padding: 7.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Recentupdates {
+    width: 33.3%;
+    padding: 7.5px;
+}
+
+.Recentupdates-text {
+    background-color: #f8f8f8;
+    color: #777;
+    padding: 24px;
+}
+
+.Recentupdates-text .Recentupdates-text-top {
+    padding-bottom: 10px;
+}
+
+.Recentupdates-text .Recentupdates-text-top i{
+    font-size: 26px;
+    color: #009688;
+}
+
+.Recentupdates-text .Recentupdates-text-top a{
+    color: #333;
+}
+
+.Recentupdates-text .Recentupdates-text-top a:hover{
+    color: #009688;
+}
+
+.Recentupdates-text .Recentupdates-text-center {
+    height: 44px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.Recentupdates-text .Recentupdates-text-bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Recentupdates-text .Recentupdates-text-bottom a {
+    color: #777;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.Recentupdates-text .Recentupdates-text-bottom span {
+    color: #CCC;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+}
+
+.content-down-left-down {
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.TopIntroduction-two {
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px;
+    border-bottom: 1px solid #f6f6f6;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 14px;
+}
+
+.dynamic-box {
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.dynamic-box-cen {
+    padding: 0 10px 10px;
+}
+
+.dynamic-box-cen dd {
+    padding: 15px 0;
+    border-bottom: 1px solid #EEE;
+    display: flex;
+}
+
+.dynamic-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #009688;
+    margin-right: 15px;
+}
+
+.dynamic-img a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+}
+
+.dynamic-box-cen dd div span {
+    color: #BBB;
+}
+
+.dynamic-box-cen dd div a {
+    color: #01AAED;
+}
+
+.content-down-right {
+    width: 33.3%;
+    padding: 7.5px;
+}
+
+.content-down-right-box {
+    margin-bottom: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.Bottombox {
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.Bottombox-cen {
+    padding-left: 10px;
+    font-size: 0;
+}
+
+.Bottombox-cen a {
+    display: inline-block;
+    width: 25%;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.Bottombox-cen button {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+    vertical-align: top;
+}
+
+.Bottombox-cen-assembly {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Bottombox-cen-assembly li {
+    padding: 10px 0 10px 10px;
+    width: 50%;
+}
+
+.Bottombox-cen-assembly li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.team-img{
+    display: inline-block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+#container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}

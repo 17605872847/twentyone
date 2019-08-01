@@ -1,0 +1,66 @@
+    <link rel="stylesheet" href="css/MessageBoard/MessageBoard.css">
+    <link rel="stylesheet" href="css/MessageBoard/iconfont.css">
+            
+            <div class="head-two">
+                <div class="head-left-two">
+                    <a href="index.html">主页</a>
+                    <p>/</p>
+                    <span>页面</span>
+                    <p>/</p>
+                    <span>留言板</span>
+                </div>
+            </div>
+            <div class="content-down-box">
+                <div class="content-down">
+                    <div class="MessageBoard-box">
+                        <div class="MessageBoard">
+                            <div class="MessageBoard-text">
+                                <div class="MessageBoard-text-input">
+                                    <textarea type="text" placeholder="请输入内容" class="textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="Publish">
+                                <div class="icon">
+                                    <i class="iconfont icon-smile"></i>
+                                    <i class="iconfont icon-tupian-copy-copy"></i>
+                                    <i class="iconfont icon-lianjie"></i>
+                                </div>
+                                <div class="Bottombox-btn">
+                                    <li>发表</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-box">
+                            <div class="comment">
+                                <a href="#">
+                                    <img src="img/MessageBoard/portrait.png" alt="">
+                                    <p class="font-color">胡歌</p>
+                                </a>
+                                <div class="comment-text">
+                                    历经打磨，@索尼中国
+                                    再献新作品—OLED电视A8F完美诞生。很开心一起参加了A8F的“首映礼”！[鼓掌]正如我们演员对舞台的热爱，索尼对科技与艺术的追求才创造出了让人惊喜的作品。作为A1兄弟款，A8F沿袭了黑科技“屏幕发声技术”和高清画质，色彩的出众表现和高端音质，让人在体验的时候如同身临其境。A8F，这次的“视帝”要颁发给你！
+                                    索尼官网预售： O网页链接 索尼旗舰店预售：
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-box">
+                            <div class="comment">
+                                <a href="#">
+                                    <img src="img/MessageBoard/portrait.png" alt="">
+                                    <p class="font-color">胡歌</p>
+                                </a>
+                                <div class="comment-text">
+                                    历经打磨，@索尼中国
+                                    再献新作品—OLED电视A8F完美诞生。很开心一起参加了A8F的“首映礼”！[鼓掌]正如我们演员对舞台的热爱，索尼对科技与艺术的追求才创造出了让人惊喜的作品。作为A1兄弟款，A8F沿袭了黑科技“屏幕发声技术”和高清画质，色彩的出众表现和高端音质，让人在体验的时候如同身临其境。A8F，这次的“视帝”要颁发给你！
+                                    索尼官网预售： O网页链接 索尼旗舰店预售：
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <div class="Bottombox-btns">
+                                <li>更多</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

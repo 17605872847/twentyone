@@ -1,0 +1,318 @@
+button{
+    outline: none;
+}
+
+.content-box {
+    width: 100%;
+    padding-left: 220px;
+    position: relative;
+    top: 51px;
+    left: 0;
+    transition: all .3s;
+}
+
+.head-two {
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.head-left-two{
+    height: 50px;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.head-left-two a{
+    color: #BBB;
+    margin-right: 0.3%;
+}
+
+.head-left-two p{
+    color: #BBB;
+    margin-right: 0.3%;
+}
+
+.head-left-two span{
+    color: #666;
+    margin-right: 0.3%;
+}
+
+.content-down-box {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+}
+
+.content-down {
+    width: 100%;
+    margin: -7.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-down-left {
+    width: 50%;
+    padding: 7.5px;
+    transition: all .2s;
+}
+
+.content-down-left-box {
+    margin-bottom: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.TopIntroduction {
+    position: relative;
+    height: 43px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.Bottombox{
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.primary{
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.primary:hover{
+    border: 1px solid #009688;
+    transition: all .5s;
+}
+
+.btn{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.normal{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #1E9FFF;
+}
+
+.warm{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #FFB800;
+}
+
+.danger{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #FF5722;
+}
+
+.disabled{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e6e6e6;
+    background-color: #FBFBFB;
+    color: #C9C9C9;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.bigbottom{
+    height: 44px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.bigbottom-two{
+    height: 44px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.bigbottom-three{
+    height: 44px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.smallbottom{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.smallbottom-two{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.smallbottom-three{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.minibottom{
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.minibottom-two{
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.minibottom-three{
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.btn-green{
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.btn-orange{
+    background-color: #FF5722;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.btn-white{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.btn-small{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.btn-blue{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+    background-color: #1E9FFF;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.content-down-right{
+    width: 50%;
+    padding: 7.5px;
+    transition: all .2s;
+}
+
+.Ellipse-primary{
+    border-radius: 100px
+}
+
+.Ellipse-btn{
+    border-radius: 100px
+}
+
+.Ellipse-normal{
+    border-radius: 100px
+}
+
+.Ellipse-warm{
+    border-radius: 100px
+}
+
+.Ellipse-danger{
+    border-radius: 100px
+}
+
+.Ellipse-disabled{
+    border-radius: 100px
+}
+
+.lj{
+    margin-right: 5px;
+}
+
+.fx{
+    margin-right: 5px;
+}
+
+.Bottombox-container{
+    font-size: 0;
+}
+
+.Bottombox-group{
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 10px;
+}
+
+.Bottombox-group:first-child{
+    border-left: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.btn-small-clear1{
+    padding-top: 2px;
+    margin-right: 1px;
+}
+
+.btn-small-clear{
+    margin-right: 1px;
+}
+
+.btn-fluid{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-space{
+    margin-right: 1px;
+}
+
+.btn-alpha:hover{
+    opacity: .8;
+    color: #fff;
+    transition: all .5s;
+}

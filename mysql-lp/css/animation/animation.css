@@ -1,0 +1,99 @@
+.animation-box{
+    width: 100%;
+    padding: 7.5px;
+}
+
+.animation-cen{
+    background: white;
+}
+
+.TopIntroduction {
+    position: relative;
+    height: 43px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.Bottombox {
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+
+.Bottombox-ball{
+    margin-bottom: 50px;
+}
+
+.Bottombox-ball li{
+    width: 222px;
+    height: 227px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 25px;
+    padding: 20px 0;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    border: 1px solid #e2e2e2;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.anim{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 auto 10px;
+    text-align: center;
+    background-color: #009688;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.anim-up{
+    position: relative;
+    top: 0;
+    opacity: 1;
+}
+
+.anim-upbit{
+    position: relative;
+    top: 0;
+    opacity: 1;
+}
+
+.anim-scale:active{
+    animation: scale .1s;
+}
+
+.anim-scaleSpring:active{
+    animation: scaleSpring .1s;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(.5)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+@keyframes scaleSpring{
+    0%{
+        transform: scale(.5)
+    }
+    80%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1)
+    }
+}

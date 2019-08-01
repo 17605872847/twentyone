@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打地鼠</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background:brown;
+    }
+
+    .head{
+        width: 100%;
+        padding: 7.5;
+        text-align: center;
+        font-size: 50px;
+        cursor:not-allowed
+    }
+    
+    .head span{
+        color: blue;
+    }
+
+    .action{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .action p{
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .fenshu{
+        font-size: 30px;
+    }
+
+    .game{
+        width: 40%;
+        margin: 0 auto;
+        padding: 7.5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .game div{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: wheat;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    #timg_1{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_2{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_3{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_4{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_5{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_6{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_7{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_8{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+
+    #timg_9{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 70%;
+    }
+</style>
+<body>
+    <header>
+        <div class="head">
+            剩余时间:<span id="time">0</span>
+        </div>
+        <div class="action">
+            <div id="play">
+                <p>开始游戏</p>
+            </div>
+            <div class="fenshu">
+                分数:<span id="fenshu">0</span>
+            </div>
+            <div id="end">
+                <p>结束游戏</p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="game">
+            <div><img id="timg_1" src="img/timg.png" alt=""></div>
+            <div><img id="timg_2" src="img/timg.png" alt=""></div>
+            <div><img id="timg_3" src="img/timg.png" alt=""></div>
+            <div><img id="timg_4" src="img/timg.png" alt=""></div>
+            <div><img id="timg_5" src="img/timg.png" alt=""></div>
+            <div><img id="timg_6" src="img/timg.png" alt=""></div>
+            <div><img id="timg_7" src="img/timg.png" alt=""></div>
+            <div><img id="timg_8" src="img/timg.png" alt=""></div>
+            <div><img id="timg_9" src="img/timg.png" alt=""></div>
+        </div>
+    </section>
+</body>
+<script src="src/jquery-1.12.4.js"></script>
+<script src="src/play.js"></script>
+</html>

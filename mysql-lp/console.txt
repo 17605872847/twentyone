@@ -1,0 +1,327 @@
+            <div class="console-one">
+                <div class="console-one-left">
+                    <div class="console-one-left-shortcut-box">
+                        <!-- 快捷方式 -->
+                        <div class="console-one-left-shortcut">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>快捷方式</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="TopIntroduction-content1-hover" style="background: #999"></li>
+                                    <li class="TopIntroduction-content1-two-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 快捷方式内容 -->
+                            <div class="TopIntroduction-content1-box">
+                                <div class="TopIntroduction-content1">
+                                    <div><a href="#"><i class="iconfont icon-dashboard_line"></i></a>
+                                        <p>主页一</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-chart"></i></a>
+                                        <p>主页二</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-templat"></i></a>
+                                        <p>弹层</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-chat"></i></a>
+                                        <p>聊天</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-zhinanzhen"></i></a>
+                                        <p>进度条</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-survey"></i></a>
+                                        <p>工单</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-use"></i></a>
+                                        <p>用户</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                </div>
+                                <div class="TopIntroduction-content1-two">
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                    <div><a href="#"><i class="iconfont icon-shezh"></i></a>
+                                        <p>设置</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 待办事项 -->
+                    <div class="console-one-left-matter-box">
+                        <div class="console-one-left-matter">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>待办事项</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="console-one-left-matter-hover" style="background: #999"></li>
+                                    <li class="console-one-left-mattertwo-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 待办事项内容 -->
+                            <div class="TopIntroduction-content2-box">
+                                <div class="TopIntroduction-content2">
+                                    <div><a href="#"></a>
+                                        <p>待审评论</p><cite>66</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待审帖子</p><cite>12</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待审商品</p><cite>99</cite>
+                                    </div>
+                                    <div><a href="#"></a>
+                                        <p>待发货</p><cite>20</cite>
+                                    </div>
+                                </div>
+                                <div class="TopIntroduction-content2-two">
+                                    <div><a href="#"></a>
+                                        <p>待审友情链接</p><cite>5</cite>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="console-one-left-down">
+                        <!-- 数据概览 -->
+                        <div class="console-one-left-data2">
+                            <!-- 顶部介绍栏 -->
+                            <div class="TopIntroduction">
+                                <p>数据概览</p>
+                                <!-- 圆形选项 -->
+                                <ul class="Balloption">
+                                    <li class="TopIntroduction-content3-one-hover" style="background: #999"></li>
+                                    <li class="TopIntroduction-content3-two-hover"></li>
+                                    <li class="TopIntroduction-content3-three-hover"></li>
+                                </ul>
+                            </div>
+                            <!-- 数据概览内容 -->
+                            <div class="TopIntroduction-content3">
+                                <p>今日流量趋势</p>
+                                <div class="Datagraph">
+                                    <div id="container"></div>
+                                    <div id="containe"></div>
+                                    <div id="contain"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 今日热搜 -->
+                        <div class="console-one-left-hotsearch-box">
+                            <div class="console-one-left-hotsearch">
+                                <!-- 顶部介绍栏 -->
+                                <div class="TopIntroduction2">
+                                    <p>今日热搜</p>
+                                    <p>今日热帖</p>
+                                </div>
+                                <div id="bottomtab">
+                                    <div id="bottomtab-content">
+                                        <table style="border-collapse:collapse;">
+                                            <tr style="background: rgb(242, 242, 242)">
+                                                <td style="width:40px;"></td>
+                                                <td style="width: 341px">关键词</td>
+                                                <td style="width: 341px">搜索次数</td>
+                                                <td style="margin-right:20px">用户数</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td style="color: #01AAED">贤心是男是女</td>
+                                                <td>8520</td>
+                                                <td>2216</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td style="color: #01AAED">Java程序员能找到女朋友吗</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td style="color: #01AAED">此表格是静态模拟数据</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td style="color: #01AAED">layui官方教程</td>
+                                                <td>666</td>
+                                                <td>33</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="console-one-right">
+                    <div class="Versionevents-box">
+                        <div class="Versionevents">
+                            <div class="TopIntroduction">
+                                <p>版本信息</p>
+                            </div>
+                            <div class="Versionevents-content">
+                                <table border="1">
+                                    <tr>
+                                        <td>当前版本</td>
+                                        <td>v1.2.1 pro <a href="" style="color: #01AAED"> 更新日志</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>基于框架</td>
+                                        <td>layui-v2.4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>主要特色</td>
+                                        <td>单页面 / 响应式 / 清爽 / 极简</td>
+                                    </tr>
+                                    <tr>
+                                        <td>获取渠道</td>
+                                        <td>
+                                            <div class="btn-box">
+                                                <a class="btn" href="">获取授权</a>
+                                                <a class="btn" href="">立即下载</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="EffectivenessReport-box">
+                        <div class="EffectivenessReport">
+                            <div class="TopIntroduction">
+                                <p>效果报告</p>
+                            </div>
+                            <div class="EffectivenessReport-content">
+                                <div class="EffectivenessReport-content1">
+                                    <h3>转化率(日同比 28%<span></span><i class="iconfont icon-sanjiaoxing"></i>)</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">65%</span></div>
+                                    <span class="content-green"></span>
+                                </div>
+                                <div class="EffectivenessReport-content2">
+                                    <h3>签到率(日同比 11%<span></span><i class="iconfont icon-daosanjiao"></i>)</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">32%</span>
+                                        <span class="content-green2"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="realtimemonitoring-box">
+                        <div class="realtimemonitoring">
+                            <div class="TopIntroduction">
+                                <p>实时监控</p>
+                            </div>
+                            <div class="realtimemonitoring-content">
+                                <div class="EffectivenessReport-content1">
+                                    <h3>CPU使用率</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">58%</span></div>
+                                    <span class="content-green"></span>
+                                </div>
+                                <div class="EffectivenessReport-content2">
+                                    <h3>内存占用率</h3>
+                                    <div class="EffectivenessReport-content1-cen"><span
+                                            class="EffectivenessReport-content1-text">90%</span>
+                                        <span class="content-red"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ProductDynamics-box">
+                        <div class="ProductDynamics">
+                            <div class="TopIntroduction">
+                                <p>产品动态</p>
+                                <!-- 圆形选项 -->
+                                <ul id="Balloption-two">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="ProductDynamics-content">
+                                <div id="ProductDynamics-content-text-one">
+                                    layuiAdmin 快速上手文档
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="authorheartlanguage-box">
+                        <div class="authorheartlanguage">
+                            <div class="TopIntroduction">
+                                <p>作者心语</p>
+                                <i class="iconfont icon-peijia"></i>
+                            </div>
+                            <div class="authorheartlanguage-content">
+                                <p>一直以来，LP 秉承无偿开源的初心，虔诚致力于服务各层次前后端 Web
+                                    开发者，在商业横飞的当今时代，这一信念从未动摇。即便身单力薄，仍然重拾决心，埋头造轮，以尽可能地填补产品本身的缺口。
+                                </p>
+                                <p>在过去的一段的时间，我一直在寻求持久之道，已维持你眼前所见的一切。而 LPAdmin 是我们尝试解决的手段之一。我相信真正有爱于 LP 生态的你，定然不会错过这一拥抱吧。
+                                </p>
+                                <p>子曰：君子不用防，小人防不住。请务必通过官网正规渠道，获得<a href="">LPAdmin</a>!</p>
+                                <p>—— 贤心(<a href="">lp-twenty-one.cn</a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="script/index.js"></script>

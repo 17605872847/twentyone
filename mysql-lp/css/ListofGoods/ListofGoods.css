@@ -1,0 +1,56 @@
+.ListofGoods-box{
+    padding: 15px;
+    width: 16.6%;
+}
+
+.ListofGoods{
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.ListofGoods a img{
+    width: 100%;
+}
+
+.ListofGoods-text{
+    padding: 20px;
+}
+
+.info{
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 105%;
+    overflow: hidden;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price{
+    font-size: 14px;
+    display: flex;
+}
+
+.price b{
+    margin-right: 20px;
+}
+
+.price p{
+    display: inline-block;
+}
+
+.price i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.price span{
+    position: relative;
+    right:-80px;
+}
+
+.forminput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

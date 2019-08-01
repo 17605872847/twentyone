@@ -1,0 +1,14 @@
+            <div class="head-two">
+                <div class="head-left-two">
+                    <a href="index.html">主页</a>
+                    <p>/</p>
+                    <span>组件</span>
+                    <p>/</p>
+                    <span>进度条</span>
+                </div>
+            </div>
+            <div class="content-down-box">
+                <div class="content-down">
+                    <!-- 这里放内容 -->
+                </div>
+            </div>
