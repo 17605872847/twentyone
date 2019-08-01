@@ -1,5 +1,7 @@
 var timer = null;
 $('#play').click(function () {
+    var user="lala";
+    localStorage.setItem("lala", 0);
     var time = 30;
     var fenshu = 0;
     $('#fenshu').html(fenshu)
@@ -11,9 +13,12 @@ $('#play').click(function () {
         if (time <= 0) {
             clearInterval(timer);
             $('#play p').show();
-            alert('Game Over');
+            alert('Game Over 您的分数为:'+localStorage.getItem('lala',fenshu));
+            var ll=localStorage.getItem('lala',fenshu)
+            console.log(ll)
+            $('#lalala').append("<li>"+user+"&nbsp;"+ll+"分"+"</li>")
         }
-    }, 1000)
+    }, 200)
 
     var arr = [timg_1, timg_2, timg_3, timg_4, timg_5, timg_6, timg_7, timg_8, timg_9];
     var playgame = null;
@@ -39,12 +44,22 @@ $('#play').click(function () {
         $(this).animate({ 'top': '200px' }, 50)
         fenshu += 1;
         $('#fenshu').html(fenshu);
+        // var a=fenshu;
+        localStorage.setItem("lala", fenshu);
     })
 
     $('img').on('mousedown', function (e) {
         e.preventDefault()
     })
 })
+//设置：
 
+// localStorage.dat = '456';
+
+//获取：
+
+//删除
+// localStorage.removeItem("dat");
 
 //console.log(arr.sort(()=>{ return 0.5 - Math.random()}));
+
