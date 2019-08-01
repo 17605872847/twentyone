@@ -28,11 +28,11 @@ $('#play').click(function () {
         // }, 700)
         lala = setTimeout(function () {
             $(arr[index]).animate({ 'top': '200px' }, 300)
-        }, 750)
+        }, 480)
         if (time <= 1) {
             clearInterval(playgame);
         }
-    }, 1000)
+    }, 800)
 
     $('.game div img').click(function () {
         event.preventDefault();
