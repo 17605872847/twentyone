@@ -28,16 +28,15 @@ $('#play').click(function () {
         // }, 700)
         lala = setTimeout(function () {
             $(arr[index]).animate({ 'top': '200px' }, 300)
-        }, 450)
+        }, 750)
         if (time <= 1) {
             clearInterval(playgame);
         }
     }, 1000)
 
-    var fenshu = 0;
     $('.game div img').click(function () {
         event.preventDefault();
-        $('.game div img').animate({ 'top': '200px' }, 50)
+        $(this).animate({ 'top': '200px' }, 50)
         fenshu += 1;
         $('#fenshu').html(fenshu);
     })
