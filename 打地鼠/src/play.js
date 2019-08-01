@@ -1,7 +1,16 @@
+$(function(){
+var username=$('#user');
+var use=null;
 var timer = null;
+$('#login').click(function(){
+    console.log(this)
+    if(username.val()!=0){
+        $(location).attr('href','play.html');
+        localStorage.setItem('lala',username.val())
+    }
+})
+    
 $('#play').click(function () {
-    var user="lala";
-    localStorage.setItem("lala", 0);
     var time = 30;
     var fenshu = 0;
     $('#fenshu').html(fenshu)
@@ -13,10 +22,10 @@ $('#play').click(function () {
         if (time <= 0) {
             clearInterval(timer);
             $('#play p').show();
-            alert('Game Over 您的分数为:'+localStorage.getItem('lala',fenshu));
-            var ll=localStorage.getItem('lala',fenshu)
+            alert('Game Over 您的分数为:'+fenshu);
+            var ll=localStorage.getItem('lala')
             console.log(ll)
-            $('#lalala').append("<li>"+user+"&nbsp;"+ll+"分"+"</li>")
+            $('#lalala').append("<li>"+ll+"&nbsp;"+fenshu+"分"+"</li>")
         }
     }, 200)
 
@@ -45,12 +54,13 @@ $('#play').click(function () {
         fenshu += 1;
         $('#fenshu').html(fenshu);
         // var a=fenshu;
-        localStorage.setItem("lala", fenshu);
+        
     })
 
     $('img').on('mousedown', function (e) {
         e.preventDefault()
     })
+})
 })
 //设置：
 
