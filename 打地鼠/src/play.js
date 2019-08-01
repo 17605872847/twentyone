@@ -6,7 +6,7 @@ $('#login').click(function(){
     console.log(this)
     if(username.val()!=0){
         $(location).attr('href','play.html');
-        localStorage.setItem('lala',username.val())
+        sessionStorage.setItem('lala',username.val())
     }
 })
     
@@ -23,7 +23,7 @@ $('#play').click(function () {
             clearInterval(timer);
             $('#play p').show();
             alert('Game Over 您的分数为:'+fenshu);
-            var ll=localStorage.getItem('lala')
+            var ll=sessionStorage.getItem('lala')
             console.log(ll)
             $('#lalala').append("<li>"+ll+"&nbsp;"+fenshu+"分"+"</li>")
         }
@@ -64,12 +64,12 @@ $('#play').click(function () {
 })
 //设置：
 
-// localStorage.dat = '456';
+// sessionStorage.dat = '456';
 
 //获取：
 
 //删除
-// localStorage.removeItem("dat");
+// sessionStorage.removeItem("dat");
 
 //console.log(arr.sort(()=>{ return 0.5 - Math.random()}));
 
