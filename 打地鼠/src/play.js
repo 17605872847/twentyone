@@ -16,7 +16,7 @@ $('#play').click(function () {
 
     var arr = [timg_1, timg_2, timg_3, timg_4, timg_5, timg_6, timg_7, timg_8, timg_9];
     var playgame = null;
-    var lala=null;
+    var lala = null;
     clearInterval(playgame);
      playgame = setInterval(function () {
         var index = Math.floor((Math.random() * arr.length));
@@ -36,10 +36,13 @@ $('#play').click(function () {
 
 var fenshu = 0;
 $('.game div img').click(function(){
+    event.preventDefault();
     $('.game div img').animate({ 'top': '200px' }, 50)
     fenshu += 1;
     $('#fenshu').html(fenshu);
 })
 
-
+$('img').on('mousedown',function (e) {
+    e.preventDefault()
+})
 //console.log(arr.sort(()=>{ return 0.5 - Math.random()}));
