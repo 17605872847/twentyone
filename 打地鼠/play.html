@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>打地鼠</title>
 </head>
@@ -23,6 +24,11 @@
     body{
         margin: 0;
         background:brown;
+    }
+
+    .cc{
+        width: 100%;
+        height: auto;
     }
 
     .head{
@@ -54,7 +60,7 @@
     }
 
     .game{
-        width: 40%;
+        width: 750px;
         margin: 0 auto;
         padding: 7.5px;
         display: flex;
@@ -140,6 +146,7 @@
     }
 </style>
 <body>
+    <div class="cc">
     <header>
         <div class="head">
             剩余时间:<span id="time">0</span>
@@ -173,6 +180,7 @@
         </ul>
          <a href="phb.html" style="font-size: 50px;">重新填写用户名</a>
     </section>
+</div>
 </body>
 <script src="src/jquery-1.12.4.js"></script>
 <script src="src/play.js"></script>

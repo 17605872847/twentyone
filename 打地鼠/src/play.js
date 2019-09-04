@@ -27,11 +27,11 @@ $('#play').click(function () {
             console.log(ll)
             $('#lalala').append("<li>"+ll+"&nbsp;"+fenshu+"分"+"</li>")
         }
-    }, 200)
+    }, 1000)
 
-    var arr = [timg_1, timg_2, timg_3, timg_4, timg_5, timg_6, timg_7, timg_8, timg_9];
     var playgame = null;
     var lala = null;
+    var arr = $('.game div img')
     clearInterval(playgame);
     playgame = setInterval(function () {
         var index = Math.floor((Math.random() * arr.length));
@@ -46,7 +46,7 @@ $('#play').click(function () {
         if (time <= 1) {
             clearInterval(playgame);
         }
-    }, 800)
+    }, 1000)
 
     $('.game div img').click(function () {
         event.preventDefault();
